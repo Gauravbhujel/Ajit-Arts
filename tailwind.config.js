@@ -11,12 +11,12 @@ module.exports = {
         serif: ["Playfair Display", "serif"],
       },
       colors: {
-        "primary": "#111827",
-        "secondary": "#6D28D9",
-        "accent": "#F59E0B",
-        "bg-soft": "#F9FAFB",
-        "text-dark": "#1F2937",
-        "accent-grey": "#F3F4F6",
+        "primary": "#0F172A", // Slate 900
+        "secondary": "#4F46E5", // Indigo 600
+        "accent": "#EC4899", // Pink 500
+        "bg-soft": "#F8FAFC", // Slate 50
+        "text-dark": "#334155", // Slate 700
+        "accent-grey": "#F1F5F9", // Slate 100
       },
       letterSpacing: {
         "widest-xl": "0.3em",
@@ -27,8 +27,8 @@ module.exports = {
         "card-hover": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
       },
       backgroundImage: {
-        "gradient-art": "linear-gradient(to right, #7C3AED, #EC4899)",
-        "gradient-soft": "radial-gradient(circle at 50% 50%, #f9fafb 0%, #f3f4f6 100%)",
+        "gradient-art": "linear-gradient(to right, #4F46E5, #F43F5E)",
+        "gradient-soft": "radial-gradient(circle at 50% 50%, #F8FAFC 0%, #F1F5F9 100%)",
       },
     },
   },
