@@ -41,13 +41,13 @@ const ContactSection = () => {
             href="https://www.instagram.com/ajitbajracharya.arts"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(79, 70, 229, 0.3)" }}
             whileTap={{ scale: 0.95 }}
-            className="group inline-flex items-center gap-4 px-12 py-5 bg-gradient-to-r from-secondary to-pink-600 text-white rounded-full font-sans text-sm font-bold uppercase tracking-[0.2em] transition-all shadow-2xl"
+            className="group inline-flex items-center gap-4 px-12 py-5 bg-gradient-to-r from-secondary to-accent text-white rounded-full font-sans text-sm font-bold uppercase tracking-[0.2em] transition-all shadow-xl hover:shadow-2xl"
           >
             <span>Instagram DM</span>
-            <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </motion.a>
         </div>

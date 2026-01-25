@@ -48,12 +48,15 @@ const HeroSection = () => {
         </p>
 
         <motion.button
-          whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(109, 40, 217, 0.2)" }}
+          whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(79, 70, 229, 0.3)" }}
           whileTap={{ scale: 0.95 }}
-          className="px-10 py-4 bg-gradient-to-r from-secondary to-pink-500 text-white rounded-full font-sans text-sm font-semibold uppercase tracking-widest transition-all shadow-xl"
+          className="group flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-secondary to-accent text-white rounded-full font-sans text-sm font-bold uppercase tracking-widest transition-all shadow-xl hover:shadow-2xl mx-auto"
           onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
         >
-          Explore Gallery
+          <span>Explore Gallery</span>
+          <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
         </motion.button>
       </motion.div>
 
