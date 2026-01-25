@@ -14,8 +14,16 @@ const HeroSection = () => {
   return (
     <section className="hero-section min-h-screen flex flex-col items-center justify-center px-6 bg-bg-soft relative overflow-hidden">
       {/* Soft Artistic Gradients */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+      <motion.div 
+        animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -top-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ y: [0, 40, 0], x: [0, -20, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" 
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

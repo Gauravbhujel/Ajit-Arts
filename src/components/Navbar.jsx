@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Home",     href: "#home"     },
@@ -43,7 +44,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled ? "glass-nav py-3" : "bg-transparent py-6"
       }`}
@@ -111,7 +115,7 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

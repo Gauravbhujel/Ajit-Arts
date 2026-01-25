@@ -5,8 +5,16 @@ const ContactSection = () => {
   return (
     <section className="py-32 px-6 bg-bg-soft flex flex-col items-center justify-center min-h-[80vh] relative overflow-hidden text-primary">
       {/* Subtle Artistic Glows for Light Theme */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+      <motion.div 
+        animate={{ y: [0, -40, 0], x: [0, 30, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -top-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute -bottom-40 -right-40 w-96 h-96 bg-accent/5 rounded-full blur-[120px] pointer-events-none" 
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
