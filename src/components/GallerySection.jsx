@@ -93,7 +93,7 @@ const GallerySection = () => {
                 delay: (index % 3) * 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group flex flex-col bg-white rounded-3xl overflow-hidden card-shadow"
+              className="group flex flex-col bg-accent-grey rounded-3xl overflow-hidden card-shadow"
             >
               <div className="relative overflow-hidden aspect-[4/5] bg-accent-grey">
                 <img

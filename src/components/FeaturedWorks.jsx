@@ -24,7 +24,7 @@ const featuredArtworks = [
 
 const FeaturedWorks = () => {
   return (
-    <section className="py-32 px-6 bg-white relative overflow-hidden text-primary">
+    <section className="py-32 px-6 bg-bg-soft relative overflow-hidden text-primary">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -56,7 +56,7 @@ const FeaturedWorks = () => {
                   className={`absolute -inset-4 bg-gradient-to-tr from-secondary/10 to-accent/10 rounded-[2.5rem] blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-50`}
                 />
 
-                <div className="relative overflow-hidden rounded-[2rem] bg-white p-3 card-shadow aspect-[4/5] lg:aspect-auto">
+                <div className="relative overflow-hidden rounded-[2rem] bg-accent-grey p-3 card-shadow aspect-[4/5] lg:aspect-auto">
                   <div className="overflow-hidden rounded-[1.5rem] h-full">
                     <img
                       src={artwork.src}

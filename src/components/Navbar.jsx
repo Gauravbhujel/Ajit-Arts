@@ -98,7 +98,7 @@ const Navbar = () => {
 
       {/* Mobile drawer */}
       <div 
-        className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 ease-in-out md:hidden ${
+        className={`fixed inset-0 bg-bg-soft z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 ease-in-out md:hidden ${
           menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
