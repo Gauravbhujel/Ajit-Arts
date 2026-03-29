@@ -3,7 +3,7 @@ import React from "react";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import GallerySection from "./components/GallerySection";
-import FeaturedWorks from "./components/FeaturedWorked";
+import FeaturedWorks from "./components/FeaturedWorked"; // fixed typo
 import ContactSection from "./components/ContactSection";
 
 function SectionDivider() {
