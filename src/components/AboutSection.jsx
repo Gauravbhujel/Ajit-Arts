@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="py-32 px-6 bg-off-white flex flex-col items-center justify-center">
+    <section className="about-section py-32 px-6 bg-off-white flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -11,7 +11,7 @@ const AboutSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-[600px] w-full text-center"
       >
-        <h2 className="font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey mb-12">
+        <h2 className="section-label font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey mb-12">
           About
         </h2>
 

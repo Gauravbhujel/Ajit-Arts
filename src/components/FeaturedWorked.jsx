@@ -30,7 +30,7 @@ const FeaturedWorks = () => {
           transition={{ duration: 0.8 }}
           className="mb-24 text-center"
         >
-          <h2 className="font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey">
+          <h2 className="section-label font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey">
             Featured Works
           </h2>
         </motion.div>
@@ -45,7 +45,7 @@ const FeaturedWorks = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex flex-col items-center"
             >
-              <div className="w-full max-w-4xl mb-8 overflow-hidden bg-white border border-black/[0.08] shadow-[0_4px_24px_rgba(0,0,0,0.06)] p-3 md:p-5">
+              <div className="featured-card w-full max-w-4xl mb-8 overflow-hidden bg-white border border-black/[0.08] shadow-[0_4px_24px_rgba(0,0,0,0.06)] p-3 md:p-5">
                 <img
                   src={artwork.src}
                   alt={artwork.title}

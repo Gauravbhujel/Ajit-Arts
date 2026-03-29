@@ -63,7 +63,7 @@ const GallerySection = () => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h2 className="font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey">
+          <h2 className="section-label font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey">
             Gallery
           </h2>
         </motion.div>
@@ -81,16 +81,19 @@ const GallerySection = () => {
               }}
               className="flex flex-col"
             >
-              <div className="aspect-square overflow-hidden bg-off-white">
+              {/* Image wrapper with hover overlay */}
+              <div className="gallery-item aspect-square bg-off-white">
                 <img
                   src={item.src}
                   alt={item.caption}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   loading="lazy"
                 />
+                <div className="gallery-overlay">
+                  <span className="gallery-overlay-text">{item.caption}</span>
+                </div>
               </div>
 
-              <p className="mt-3 font-serif text-sm text-soft-grey text-center">
+              <p className="mt-3 font-serif text-sm text-soft-grey text-center transition-colors duration-300">
                 {item.caption}
               </p>
             </motion.div>

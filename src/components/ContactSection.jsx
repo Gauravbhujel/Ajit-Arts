@@ -16,8 +16,10 @@ const ContactSection = () => {
         </p>
 
         <a
-          href="#"
-          className="font-sans text-2xl md:text-4xl font-light tracking-wide text-ink-black hover:text-soft-grey transition-colors duration-300 mb-16"
+          href="https://www.instagram.com/ajitbajracharya.arts"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-link font-sans text-2xl md:text-4xl font-light tracking-wide text-ink-black hover:text-soft-grey transition-colors duration-300 mb-16"
         >
           @ajitbajracharya.arts
         </a>
