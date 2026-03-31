@@ -3,19 +3,23 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="about-section py-32 px-6 bg-off-white flex flex-col items-center justify-center">
+    <section className="about-section py-32 px-6 bg-white flex flex-col items-center justify-center relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-[600px] w-full text-center"
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        className="max-w-4xl w-full text-center"
       >
-        <h2 className="section-label font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey mb-12">
-          About
+        <span className="section-label mb-12">
+          ARTISTIC PHILOSOPHY
+        </span>
+
+        <h2 className="font-serif text-4xl md:text-6xl text-primary mb-12 leading-tight">
+          Capturing the <span className="text-secondary italic">soul</span> of heritage through <br className="hidden md:block" /> modern geometry.
         </h2>
 
-        <p className="font-serif text-xl md:text-2xl leading-loose text-ink-black">
+        <p className="font-sans text-lg md:text-xl leading-relaxed text-text-dark/80 mb-12">
           Ajit Bajracharya is a Pokhara-based visual artist specializing in
           intricate mandala art and detailed pen illustrations. With a deep
           reverence for traditional Nepali artistic heritage, each piece is a
@@ -23,6 +27,11 @@ const AboutSection = () => {
           Through ink and devotion, Ajit transforms blank canvases into living,
           breathing patterns that bridge the ancient and the contemporary.
         </p>
+
+        <div className="flex justify-center gap-6">
+          <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-transparent rounded-full" />
+          <div className="w-16 h-0.5 bg-gradient-to-l from-accent to-transparent rounded-full" />
+        </div>
       </motion.div>
     </section>
   );

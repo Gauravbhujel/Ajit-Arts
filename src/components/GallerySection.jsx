@@ -54,48 +54,66 @@ const galleryItems = [
 
 const GallerySection = () => {
   return (
-    <section className="py-32 px-4 md:px-12 lg:px-24 bg-white">
+    <section className="py-24 px-6 bg-bg-soft relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          transition={{ duration: 1 }}
+          className="mb-20 text-center"
         >
-          <h2 className="section-label font-sans text-xs font-semibold tracking-widest-xl uppercase text-soft-grey">
-            Gallery
+          <span className="section-label mb-6">THE GALLERY</span>
+          <h2 className="mt-4 font-serif text-4xl md:text-6xl text-primary font-bold tracking-tight">
+            Selected Creations
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14">
           {galleryItems.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 0.6,
-                delay: (index % 3) * 0.1,
+                duration: 0.8,
+                delay: (index % 3) * 0.15,
+                ease: [0.22, 1, 0.36, 1]
               }}
-              className="flex flex-col"
+              className="group flex flex-col bg-white rounded-3xl overflow-hidden card-shadow"
             >
-              {/* Image wrapper with hover overlay */}
-              <div className="gallery-item aspect-square bg-off-white">
+              <div className="relative overflow-hidden aspect-[4/5] bg-accent-grey">
                 <img
                   src={item.src}
                   alt={item.caption}
                   loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                 />
-                <div className="gallery-overlay">
-                  <span className="gallery-overlay-text">{item.caption}</span>
+                
+                {/* Modern Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                  <span className="text-accent font-sans text-[10px] font-bold tracking-[0.3em] uppercase mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    {item.caption.split('—')[1] || "Artwork"}
+                  </span>
+                  <p className="text-white font-serif text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                    {item.caption.split('—')[0]}
+                  </p>
                 </div>
               </div>
 
-              <p className="mt-3 font-serif text-sm text-soft-grey text-center transition-colors duration-300">
-                {item.caption}
-              </p>
+              <div className="p-8 pb-10">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-sans text-[10px] font-bold text-secondary uppercase tracking-[0.2em] bg-secondary/5 px-2.5 py-1 rounded-full">
+                    {item.caption.split('—')[1] || "Fine Art"}
+                  </span>
+                  <div className="w-8 h-[1px] bg-primary/10 group-hover:w-12 group-hover:bg-accent transition-all duration-500" />
+                </div>
+                
+                <h3 className="font-serif text-2xl text-primary group-hover:text-secondary transition-colors duration-300">
+                  {item.caption.split('—')[0]}
+                </h3>
+              </div>
             </motion.div>
           ))}
         </div>
