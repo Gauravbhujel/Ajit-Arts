@@ -98,12 +98,17 @@ const Navbar = () => {
           menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
-        {NAV_LINKS.map(({ label, href }) => (
+        {NAV_LINKS.map(({ label, href }, i) => (
           <a
             key={href}
             href={href}
             onClick={(e) => handleClick(e, href)}
-            className={`font-serif text-4xl font-semibold transition-colors ${
+            style={{
+              transitionDelay: menuOpen ? `${i * 100}ms` : "0ms",
+              transform: menuOpen ? "translateY(0)" : "translateY(20px)",
+              opacity: menuOpen ? 1 : 0
+            }}
+            className={`font-serif text-4xl font-semibold transition-all duration-500 ${
               activeLink === href ? "text-secondary" : "text-primary/50"
             }`}
           >

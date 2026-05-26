@@ -2,14 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const titleRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (titleRef.current) titleRef.current.classList.add("animate");
-    }, 200);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section className="hero-section min-h-screen flex flex-col items-center justify-center px-6 bg-bg-soft relative overflow-hidden">
@@ -27,17 +19,24 @@ const HeroSection = () => {
           Digital Art & Portfolios
         </span>
         
-        <h1
-          ref={titleRef}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="hero-title font-serif text-5xl md:text-8xl lg:text-9xl font-bold text-primary mb-8 leading-tight tracking-tight"
         >
           Ajit<span className="italic text-secondary font-medium">Arts</span>
-        </h1>
+        </motion.h1>
 
-        <p className="font-sans text-lg md:text-xl text-text-dark/70 max-w-2xl mx-auto leading-relaxed mb-12">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="font-sans text-lg md:text-xl text-text-dark/70 max-w-2xl mx-auto leading-relaxed mb-12"
+        >
           "Art speaks where words are unable to explain." <br />
           Discover a collection where tradition meets contemporary vision.
-        </p>
+        </motion.p>
 
         <motion.button
           whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(109, 40, 217, 0.2)" }}
